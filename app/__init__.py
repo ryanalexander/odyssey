@@ -1,6 +1,7 @@
 from flask import Flask
 from app.setup.database_check import apply_migrations
 import logging
+from app.routes import testing
 from app.utils.Logging import CustomFormatter
 
 class App:
@@ -20,7 +21,7 @@ class App:
         # Initialize app
         logging.info("App initialized")
         logging.info("Applying database migrations")
-        apply_migrations()
+        # apply_migrations()
         logging.info("Database migrations applied")
 
         # Create Flask app instance
@@ -36,10 +37,13 @@ class App:
 
     def configure_app(self):
         # App configuration settings
+        # Include all in /routes
+
         pass
 
     def register_blueprints(self):
         # Register Flask blueprints
+        self.flask_app.register_blueprint(testing.test_blueprint) 
         pass
 
     def run(self):
