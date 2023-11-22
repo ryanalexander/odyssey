@@ -1,7 +1,7 @@
-from flask import Blueprint
+from app.routes import api_blueprint
+from flask import Response
+import json
 
-test_blueprint = Blueprint('test', __name__)
-
-@test_blueprint.route("/test")
+@api_blueprint.route("/test")
 def test_route():
     return "Hello world"
