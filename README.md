@@ -5,7 +5,7 @@ Note. This will likely not get finished. The purpose was to demonstrate a concep
 Concept for a generic-based rest server.
 
 ## Prerequisites
-- Pygame
+- Python 3.x
 
 ## Install
 ```bash
